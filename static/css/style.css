@@ -1,0 +1,151 @@
+/*
+    Formatacao geral
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    background-Image: url("../img/fundo.jpg");
+    }
+button {
+    background-color: #fdfdfd;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer; /* maozinha no botao */
+    display: flex;
+    align-items: center;
+    align-items: center; /* alinha icone no botao */
+    transition: 0.4s;
+}
+/* muda cor do btn ao passar o mouse */
+button:hover {
+    background-color: #102f5e;
+    color: #fff;
+    }
+/* i = muda cor do icone do botão */
+button:hover > i {
+    color: #fff;
+}
+button i {
+    color: #102f5e;
+    font-weight: bold;
+    pointer-events: none; /* desativa icon p quando clicar usar o botão e nao o icon */
+}
+input, select {
+    padding: .25rem .5rem;
+}
+/* classe hide esconde itens */
+.hide {
+    display: none;
+}
+/*
+    HEADER
+*/
+
+.todo-container {
+    max-width: 450px;
+    margin: 3rem auto; /* 3 em cima, auto faz centralizar na tela */
+    background-color: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+
+}
+
+/*
+    FORMULARIO
+*/
+
+#todo-form,
+#edit-form {
+    padding: 1rem; /* cria uma margem ao redor de todo conteudo */
+    font-weight: bold; /* fonte negrito */
+
+}
+.form-control {
+    display: flex;
+}
+.form-control input {
+    margin-right: 1rem;
+}
+#cancel-edit-btn {
+    margin-top: 1rem;
+}
+
+/*
+    TOOLBAR
+*/
+
+#toolbar{
+    padding: 1rem;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid #ccc; /* cria uma borda (linha) */
+    display: flex; /* coloca um do lado do outro */
+}
+
+#toolbar h4  {
+    margin-bottom: 0.5rem;
+}
+
+#search {
+    border-right: 3px solid #ddd;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+#search form {
+    display: flex;
+}
+#search input {
+    width: 100%;
+    margin-right: .3rem;
+}
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+#filter select {
+    flex: 1;
+}
+/*
+    LISTA DE TAREFAS
+*/
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 3px solid #ddd;
+    transition: .3s
+}
+.todo h3 {
+    flex: 1;
+    font-size: .9rem;
+}
+.todo button {
+    margin-left: .4rem;
+}
+.done {
+    background-color: #395169
+}
+.done h3 {
+    color: #fff;
+    text-decoration: line-through; /* passa um risco no texto */
+    font-style: italic;
+}
+
